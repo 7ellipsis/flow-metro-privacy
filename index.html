@@ -13,31 +13,75 @@
 </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
+<h1>Flow Metro – Privacy Policy</h1>
 <p><strong>App:</strong> Flow Metro – Tile Launcher<br>
-<strong>Developer:</strong> 7ellipsis<br>
-<strong>Last updated:</strong> August 2026</p>
+<strong>Developer:</strong> Ashay Mandwarya / 7ellipsis<br>
+<strong>Last updated:</strong> 23 September 2026</p>
 
 <h2>Overview</h2>
-<p>Flow Metro is a Windows Phone-style home screen launcher for Android. We do not collect, store, or transmit any personal data to external servers. All processing happens entirely on your device.</p>
+<p>Flow Metro is an independent Android home-screen launcher. It is not affiliated
+with Microsoft. There is no Flow Metro account or advertising profile. Most data is
+read and processed on the device; the limited transfers below happen only when you
+choose the related feature.</p>
 
-<h2>Permissions and their purpose</h2>
+<h2>On-device permissions</h2>
 <ul>
-  <li><strong>Accessibility Service (BIND_ACCESSIBILITY_SERVICE)</strong> – Used solely to draw WP-style navigation buttons over other apps, display the volume bar when hardware volume keys are pressed, and open Action Center notifications via the global edge gesture. The service may read on-screen accessibility labels only to support these features. No personal information is collected or transmitted.</li>
-  <li><strong>Foreground Service (FOREGROUND_SERVICE_SPECIAL_USE)</strong> – A persistent foreground service keeps the overlay UI (navigation tiles, volume bar, action center) running while the launcher is active. This service performs no network activity.</li>
-  <li><strong>Read Media Images (READ_MEDIA_IMAGES)</strong> – Lets you choose photos from your gallery as tile backgrounds or home screen wallpapers. Images are read locally and never uploaded.</li>
-  <li><strong>Read Media Video (READ_MEDIA_VIDEO)</strong> – Lets you set a local video file as a live wallpaper. Videos are read locally and never uploaded.</li>
-  <li><strong>Query All Packages (QUERY_ALL_PACKAGES)</strong> – Used to list installed apps so they can be pinned as live tiles on the home screen. The app list is stored locally and never transmitted.</li>
+  <li><strong>AccessibilityService</strong> – Only after a separate, prominent in-app
+  disclosure and your explicit acceptance. It receives window-change events, the
+  foreground package and volume-key events to keep optional navigation overlays,
+  the volume panel and the global Action Center gesture in sync. It cannot retrieve
+  window content or accessibility text, take screenshots, read messages/passwords,
+  or share service data.</li>
+  <li><strong>Contacts, Call Log and SMS</strong> – People and Threads use these
+  providers on-device for contacts, recent calls and messaging. Threads requests
+  the Android default SMS role before restricted SMS permissions.</li>
+  <li><strong>Calendar</strong> – Day Sense reads and writes calendar events on-device
+  for the calendar tile and reminders.</li>
+  <li><strong>Photos, videos and audio</strong> – Selected local media powers tiles,
+  wallpapers and playback. Flow does not upload these files by itself.</li>
+  <li><strong>Notifications and installed apps</strong> – Notification access mirrors
+  alerts into Flow's Action Center and tiles; QUERY_ALL_PACKAGES lists launchable
+  apps for the launcher. Both stay on-device.</li>
+  <li><strong>Files</strong> – File Sense can browse and manage local files after you
+  grant Android all-files access. File names and contents stay local unless you
+  explicitly share or transfer them.</li>
+  <li><strong>Foreground work</strong> – A visible foreground service runs only for a
+  user-enabled lock screen (normal, Glance AOD or transflective surface) or a
+  user-started File Sense operation. It stops when the feature or operation ends.</li>
+  <li><strong>Microphone and device controls</strong> – Microphone is used only for
+  keyboard voice input after you choose it. Overlay and write-settings access is
+  used only for the Flow controls you enable; Android presents the system grant.</li>
 </ul>
 
-<h2>Data collection</h2>
-<p>Flow Metro collects <strong>no personal data</strong>. There is no analytics, no advertising SDK, no crash reporting service, and no account system. The app works fully offline.</p>
+<h2>Data that leaves the device</h2>
+<ul>
+  <li><strong>Weather:</strong> optional approximate coordinates (device location,
+  IP-derived location or your default city) are sent over HTTPS to
+  <a href="https://open-meteo.com">Open-Meteo</a> to return a forecast. You can use
+  a default city or leave weather unused.</li>
+  <li><strong>Wallpaper:</strong> optional image requests contact Bing/Microsoft;
+  no personal content is attached.</li>
+  <li><strong>Cloud storage:</strong> if you start a Google Drive, OneDrive or
+  Dropbox connection, OAuth codes/tokens and the files you explicitly transfer go
+  to that provider. Tokens are stored encrypted on-device and disconnecting removes
+  them.</li>
+</ul>
 
-<h2>Third-party services</h2>
-<p>Flow Metro does not integrate any third-party SDKs that collect user data.</p>
+<h2>Telemetry and advertising ID</h2>
+<p>The current Play release has no <code>google-services.json</code> configuration and
+removes advertising-ID permissions from the merged manifest. Metrics therefore stays
+in local mode: feature events are debug-log only and no analytics or crash report is
+sent to Firebase. There are no ads.</p>
+
+<h2>Deletion and retention</h2>
+<p>Flow Metro has no account or server-side personal-data store. Local settings and
+cached data can be removed from Android app settings or by uninstalling. Disconnect
+any cloud provider in File Sense to remove its encrypted tokens. Third-party services
+apply their own retention policies; see their policies when you use them.</p>
 
 <h2>Children's privacy</h2>
-<p>The app does not knowingly collect data from anyone, including children under 13.</p>
+<p>Flow Metro is intended for adults and is not directed at children. We do not
+knowingly collect data from children.</p>
 
 <h2>Changes to this policy</h2>
 <p>If this policy changes, the updated version will be posted at this URL with a revised date.</p>
