@@ -1,92 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy – Flow Metro</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow Metro — Privacy Policy</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
-  h1 { font-size: 1.8rem; margin-bottom: 0.2rem; }
-  h2 { font-size: 1.1rem; margin-top: 2rem; }
-  p, li { font-size: 0.97rem; }
-  a { color: #0062cc; }
+  body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1a1a1a}
+  h1{font-size:28px} h2{font-size:20px;margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}
+  code{background:#f4f4f4;padding:1px 5px;border-radius:3px}
+  .muted{color:#666} table{border-collapse:collapse;width:100%} td,th{border:1px solid #ddd;padding:8px;text-align:left;vertical-align:top}
+  a{color:#0277bd}
 </style>
 </head>
 <body>
-<h1>Flow Metro – Privacy Policy</h1>
-<p><strong>App:</strong> Flow Metro – Tile Launcher<br>
-<strong>Developer:</strong> Ashay Mandwarya / 7ellipsis<br>
-<strong>Last updated:</strong> 23 September 2026</p>
+<h1>Flow Metro — Privacy Policy</h1>
+<p class="muted">Last updated: 28 September 2026</p>
 
-<h2>Overview</h2>
-<p>Flow Metro is an independent Android home-screen launcher. It is not affiliated
-with Microsoft. There is no Flow Metro account or advertising profile. Most data is
-read and processed on the device; the limited transfers below happen only when you
-choose the related feature.</p>
+<p>Flow Metro ("the app") is an independent home-screen launcher for Android, published
+by Ashay Mandwarya ("we"). It is not affiliated with Microsoft. This policy explains
+exactly what the app accesses, why, and what does or does not leave your device. The
+short version: <strong>Flow Metro runs on your device and sends only the limited data
+listed below to the named provider for the feature you chose.</strong></p>
 
-<h2>On-device permissions</h2>
+<h2>No account, no sign-up</h2>
+<p>Flow Metro has no login. We do not ask for, collect, or store your name, email,
+phone number, or any personal identifier on our servers. We do not have servers that
+receive your personal content.</p>
+
+<h2>What the app accesses, and why (all on-device)</h2>
+<p>These permissions power launcher features. The data is read on your device and is
+<strong>not transmitted to Flow Metro</strong>:</p>
+<table>
+  <tr><th>Access</th><th>Why</th></tr>
+  <tr><td>Contacts, call logs &amp; messages</td><td>Show People and Threads content, call history, caller details and messaging views when you choose those features. Read and written on-device only; Flow does not upload this content. Threads asks for Android's default SMS app role before it uses SMS permissions.</td></tr>
+  <tr><td>Calendar</td><td>Show your events on the Calendar tile and in Cal Sense, add or edit events you create there, and fire their reminders. Read and written on-device only.</td></tr>
+  <tr><td>Photos, videos &amp; audio</td><td>Show your gallery on the Photos tile, set a Start background, and list and play local media. Read on-device only; Flow does not upload these files by itself.</td></tr>
+  <tr><td>Notification access</td><td>Mirror notifications into the action center, tile badges, and toast banners. Notification content is processed on your device and is not sent anywhere.</td></tr>
+  <tr><td>Installed apps (query all packages)</td><td>List and launch your apps — the core job of a launcher. On-device only.</td></tr>
+  <tr><td>Files (optional)</td><td>File Sense can browse and manage device files after you grant its all-files access. File names and contents stay on the device unless you explicitly share or use a named cloud provider.</td></tr>
+  <tr><td>Accessibility service (optional)</td><td>Only if you explicitly accept the separate in-app disclosure and enable it: powers navigation overlays (a long press on Back opens recent apps), the global volume panel, the top-swipe action center, and locking the screen when you double-tap Start or when Flow's Glance clock or lock screen times out. It receives window-change events, the foreground package and volume-key events only; it does not retrieve window content, read screen text, take screenshots or transmit anything.</td></tr>
+  <tr><td>Bluetooth / Wi-Fi / network state</td><td>Reflect and toggle these from the action center quick toggles. On-device only.</td></tr>
+  <tr><td>Microphone (optional keyboard voice input)</td><td>Used only after you choose voice input in the Flow keyboard. Audio is passed to Android's selected speech recognizer; Flow does not store recordings.</td></tr>
+  <tr><td>Location (optional)</td><td>Local weather on the Weather tile, the city name in quick toggles and the map. Your position is read on the device; only a rounded position leaves it (see below).</td></tr>
+  <tr><td>Physical activity (optional)</td><td>The Steps tile shows today's step count from the phone's step counter. On-device only; Flow does not use Health Connect and sends no health data.</td></tr>
+  <tr><td>Usage access (optional)</td><td>Orders your recent apps in the app list. On-device only.</td></tr>
+  <tr><td>Alarms &amp; reminders (optional)</td><td>Lets Cal Sense reminders fire at the exact minute. Without it Android may deliver them a few minutes late.</td></tr>
+  <tr><td>Lock screen, full-screen notifications and display over other apps (optional)</td><td>Show Flow's Glance clock and lock screen over Android's lock when the screen wakes, and show Flow toasts. On-device only.</td></tr>
+  <tr><td>Foreground work</td><td>A visible foreground service with a notification runs only while the Flow lock screen is turned on, or while a File Sense copy, move, zip or cloud transfer you started is running. It stops when the feature or the job ends.</td></tr>
+  <tr><td>Modify system settings (optional)</td><td>Lets action-center toggles change brightness and rotation. Android shows its own grant page.</td></tr>
+</table>
+
+<h2>Data that does leave your device</h2>
+<p>A few optional features contact third-party services. Each is limited to what the
+feature needs:</p>
+<table>
+  <tr><th>Feature</th><th>What is sent</th><th>To whom</th></tr>
+  <tr><td>Weather tile</td><td>Your <em>approximate</em> location, rounded to about 1 km before it is sent, to return local weather. If the phone has no location fix, your IP address is used to estimate a city instead. You can instead set a default city, or leave weather unused. City names you search for. No account, no identifier.</td><td>Open-Meteo (open-meteo.com); ipwho.is for the IP estimate</td></tr>
+  <tr><td>Map</td><td>Standard map-tile requests for the area you view.</td><td>OpenStreetMap (tile.openstreetmap.org)</td></tr>
+  <tr><td>Wallpaper search (optional)</td><td>The search words you type and standard image requests.</td><td>Unsplash, Picsum</td></tr>
+  <tr><td>Pinned website tiles (optional)</td><td>The domain name of a website you pin, to fetch its icon.</td><td>The website itself, DuckDuckGo and Google icon services</td></tr>
+  <tr><td>Reddit tile (optional)</td><td>A standard request for Reddit's public front-page feed. No Reddit account is used.</td><td>Reddit</td></tr>
+  <tr><td>Album art</td><td>A standard image request for the cover art of the song playing, when the music app provides only a web address for it.</td><td>The music service's image server (for example Spotify)</td></tr>
+  <tr><td>Daily wallpaper (optional)</td><td>A standard image request to fetch the Bing image of the day. No personal data attached.</td><td>Bing / Microsoft</td></tr>
+  <tr><td>Optional cloud storage</td><td>OAuth authorization codes and access tokens only when you explicitly connect Google Drive, OneDrive or Dropbox; file bytes go to the provider you choose when you start a transfer. Tokens are stored encrypted on the device, and disconnecting the provider in File Sense removes them.</td><td>Google Drive, Microsoft OneDrive or Dropbox</td></tr>
+</table>
+
+<h2>Telemetry</h2>
+<p>Flow Metro uses Google Firebase Analytics and Firebase Crashlytics to understand which
+features are used and to fix crashes. They receive anonymous feature events (for
+example "a quick toggle was used"), crash reports with device model and Android
+version, and a random app-instance identifier. They never receive your contacts,
+messages, call history, calendar, photos, files, notifications, location or typed
+text. Flow does not use the advertising identifier. You can turn analytics and crash
+reporting off at any time in <strong>Settings → privacy</strong>; to delete data already
+collected, email the address below. Firebase is operated by Google under the
+<a href="https://firebase.google.com/support/privacy">Firebase privacy terms</a>.</p>
+
+<h2>What we never do</h2>
 <ul>
-  <li><strong>AccessibilityService</strong> – Only after a separate, prominent in-app
-  disclosure and your explicit acceptance. It receives window-change events, the
-  foreground package and volume-key events to keep optional navigation overlays,
-  the volume panel and the global Action Center gesture in sync. It cannot retrieve
-  window content or accessibility text, take screenshots, read messages/passwords,
-  or share service data.</li>
-  <li><strong>Contacts, Call Log and SMS</strong> – People and Threads use these
-  providers on-device for contacts, recent calls and messaging. Threads requests
-  the Android default SMS role before restricted SMS permissions.</li>
-  <li><strong>Calendar</strong> – Day Sense reads and writes calendar events on-device
-  for the calendar tile and reminders.</li>
-  <li><strong>Photos, videos and audio</strong> – Selected local media powers tiles,
-  wallpapers and playback. Flow does not upload these files by itself.</li>
-  <li><strong>Notifications and installed apps</strong> – Notification access mirrors
-  alerts into Flow's Action Center and tiles; QUERY_ALL_PACKAGES lists launchable
-  apps for the launcher. Both stay on-device.</li>
-  <li><strong>Files</strong> – File Sense can browse and manage local files after you
-  grant Android all-files access. File names and contents stay local unless you
-  explicitly share or transfer them.</li>
-  <li><strong>Foreground work</strong> – A visible foreground service runs only for a
-  user-enabled lock screen (normal, Glance AOD or transflective surface) or a
-  user-started File Sense operation. It stops when the feature or operation ends.</li>
-  <li><strong>Microphone and device controls</strong> – Microphone is used only for
-  keyboard voice input after you choose it. Overlay and write-settings access is
-  used only for the Flow controls you enable; Android presents the system grant.</li>
+  <li>We do not sell or rent your data to anyone.</li>
+  <li>We do not show ads.</li>
+  <li>We do not upload your contacts, calendar, photos, notifications, or messages.</li>
+  <li>We do not build advertising or tracking profiles about you.</li>
 </ul>
 
-<h2>Data that leaves the device</h2>
-<ul>
-  <li><strong>Weather:</strong> optional approximate coordinates (device location,
-  IP-derived location or your default city) are sent over HTTPS to
-  <a href="https://open-meteo.com">Open-Meteo</a> to return a forecast. You can use
-  a default city or leave weather unused.</li>
-  <li><strong>Wallpaper:</strong> optional image requests contact Bing/Microsoft;
-  no personal content is attached.</li>
-  <li><strong>Cloud storage:</strong> if you start a Google Drive, OneDrive or
-  Dropbox connection, OAuth codes/tokens and the files you explicitly transfer go
-  to that provider. Tokens are stored encrypted on-device and disconnecting removes
-  them.</li>
-</ul>
+<h2>Purchases</h2>
+<p>The optional one-time "Metro Pro" unlock is processed by Google Play Billing. We
+never see or store your payment details; Google handles the transaction.</p>
 
-<h2>Telemetry and advertising ID</h2>
-<p>The current Play release has no <code>google-services.json</code> configuration and
-removes advertising-ID permissions from the merged manifest. Metrics therefore stays
-in local mode: feature events are debug-log only and no analytics or crash report is
-sent to Firebase. There are no ads.</p>
+<h2>Data security &amp; retention</h2>
+<p>On-device data stays in the app's private storage and is removed when you uninstall.
+Any data sent to the third-party services above is transmitted over encrypted (HTTPS)
+connections. We run no servers of our own. Anonymous analytics and crash reports are
+kept in Firebase only for the retention period set in the Firebase console and are
+deleted on request.</p>
 
-<h2>Deletion and retention</h2>
-<p>Flow Metro has no account or server-side personal-data store. Local settings and
-cached data can be removed from Android app settings or by uninstalling. Disconnect
-any cloud provider in File Sense to remove its encrypted tokens. Third-party services
-apply their own retention policies; see their policies when you use them.</p>
-
-<h2>Children's privacy</h2>
-<p>Flow Metro is intended for adults and is not directed at children. We do not
-knowingly collect data from children.</p>
+<h2>Children</h2>
+<p>Flow Metro is a general-audience utility intended for adults and is not directed at
+children. We do not knowingly collect data from children.</p>
 
 <h2>Changes to this policy</h2>
-<p>If this policy changes, the updated version will be posted at this URL with a revised date.</p>
+<p>If this policy changes, we will update the "Last updated" date above and post the
+new version at this URL.</p>
 
 <h2>Contact</h2>
-<p>Questions? Email: <a href="mailto:ashaymurceilago@gmail.com">ashaymurceilago@gmail.com</a></p>
+<p>Questions about privacy? Email <a href="mailto:ashaymurceilago@gmail.com">ashaymurceilago@gmail.com</a>.</p>
 </body>
 </html>
